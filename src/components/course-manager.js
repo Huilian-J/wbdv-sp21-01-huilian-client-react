@@ -26,13 +26,18 @@ class CourseManager
         this.setState(this.state)
     }
 
+    deleteCourse = (courseToDelete) => {
+        const newCourses = this.state.courses.filter(course => course != courseToDelete)
+        this.setState({courses: newCourses})
+    }
+
     render() {
         return(
             <div>
                 <h1>Course Manager</h1>
                 <button onClick={this.addCourse}>Add Course</button>
-                <CourseTable courses={this.state.courses}/>
-                <CourseGrid courses={this.state.courses}/>
+                <CourseTable deleteCourse={this.deleteCourse} courses={this.state.courses}/>
+                <CourseGrid deleteCourse={this.deleteCourse} courses={this.state.courses}/>
                 <CourseEditor/>
             </div>
         )

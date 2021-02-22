@@ -18,10 +18,9 @@ export default class CourseTable
                     {
                         this.props.courses.map((course, ndx) =>
                             <CourseRow
+                                deleteCourse={this.props.deleteCourse}
                                 key={ndx}
-                                title={course.title}
-                                owner={course.owner}
-                                lastModified={course.lastModified}/>)
+                                course={course}/>)
                     }
                     </tbody>
                 </table>

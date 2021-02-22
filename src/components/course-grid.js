@@ -1,13 +1,16 @@
 import React from 'react'
 import CourseCard from "./course-card";
 
-const CourseGrid = ({courses}) =>
+const CourseGrid = ({deleteCourse, courses}) =>
     <div>
         <h2>Course Grid{courses.length}</h2>
         <div className="row">
             {
-                courses.map(course =>
-                    <CourseCard course={course}/>
+                courses.map((course, ndx) =>
+                    <CourseCard
+                        deleteCourse={deleteCourse}
+                        key={ndx}
+                        course={course}/>
                 )
             }
         </div>

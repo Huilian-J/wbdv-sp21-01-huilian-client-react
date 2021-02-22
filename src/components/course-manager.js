@@ -16,10 +16,21 @@ class CourseManager
         ]
     }
 
+    addCourse = () => {
+        const newCourse = {
+            title: "New Course",
+            owner: "New Owner",
+            lastModified: "Never"
+        }
+        this.state.courses.push(newCourse)
+        this.setState(this.state)
+    }
+
     render() {
         return(
             <div>
                 <h1>Course Manager</h1>
+                <button onClick={this.addCourse}>Add Course</button>
                 <CourseTable courses={this.state.courses}/>
                 <CourseGrid courses={this.state.courses}/>
                 <CourseEditor/>

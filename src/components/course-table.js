@@ -8,21 +8,11 @@ export default class CourseTable
         super(props);
     }
 
-    addCourse = () => {
-        const newCourse = {
-            title: "New Course",
-            owner: "New Owner",
-            lastModified: "Never"
-        }
-        this.props.courses.push(newCourse)
-        this.setState(this.state)
-    }
-
     render() {
         return(
             <div>
                 <h2>Course Table</h2>
-                <button onClick={this.addCourse}>Add Course</button>
+                {/*<button onClick={this.addCourse}>Add Course</button>*/}
                 <table className="table">
                     <tbody>
                     {

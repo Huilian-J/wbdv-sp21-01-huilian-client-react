@@ -60,8 +60,25 @@ class CourseManager
     render() {
         return(
             <div>
-                <h1>Course Manager</h1>
-                <button onClick={this.addCourse}>Add Course</button>
+                <div className="wbdv-sticky-nav-bar mt-2">
+                    <div className="row">
+                        <div className="col-1">
+                            <i className="fa fa-bars fa-2x"></i>
+                        </div>
+                        <div className="col-2 d-none d-lg-block wbdv-nav-bar-text">
+                            <h5>Course Manager</h5>
+                        </div>
+                        <div className="col-8">
+                            <input className="form-control" placeholder="New Course Title"/>
+                        </div>
+                        <div className="col-1">
+                            <a onClick={this.addCourse}>
+                                <i className="fas fa-plus-circle fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <Route path="/courses/table">
                     <CourseTable
                         updateCourse={this.updateCourse}

@@ -21,6 +21,7 @@ export default class CourseTable
                     {
                         this.props.courses.map((course, ndx) =>
                             <CourseRow
+                                updateCourse={this.props.updateCourse}
                                 deleteCourse={this.props.deleteCourse}
                                 key={ndx}
                                 course={course}/>)

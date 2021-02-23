@@ -47,6 +47,17 @@ class CourseManager
             })
     }
 
+    updateCourse = (course) => {
+        console.log(course)
+        CourseService.updateCourse(course._id, course)
+            .then(status => {
+                this.setState((prevState) => ({
+                    ...prevState,
+                    courses: prevState.courses.map(c => c._id === course._id? course : c)
+                }))
+            })
+    }
+
     render() {
         return(
             <div>
@@ -54,6 +65,7 @@ class CourseManager
                 <button onClick={this.addCourse}>Add Course</button>
                 <Route path="/courses/table">
                     <CourseTable
+                        updateCourse={this.updateCourse}
                         deleteCourse={this.deleteCourse}
                         courses={this.state.courses}/>
                 </Route>

@@ -1,9 +1,19 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
+import {updateCourse} from "../services/course-service";
 
-const CourseRow = ({deleteCourse, course}) => {
+const CourseRow = ({deleteCourse, updateCourse, course}) => {
 
     const [editing, setEditing] = useState(false)
+    const [newTitle, setNewTitle] = useState(course.title)
+    const saveTitle = () => {
+        setEditing(false)
+        const newCourse = {
+            ...course,
+            title: newTitle
+        }
+        updateCourse(newCourse)
+    }
 
     return (
         <tr>
@@ -16,7 +26,8 @@ const CourseRow = ({deleteCourse, course}) => {
                 }
                 {
                     editing &&
-                    <input value={course.title}
+                    <input onChange={(event) => setNewTitle(event.target.value)}
+                           value={newTitle}
                            className="form-control"/>
                 }
             </td>
@@ -25,7 +36,7 @@ const CourseRow = ({deleteCourse, course}) => {
             <td>
                 <i onClick={() => deleteCourse(course)} className="fas fa-trash"></i>
                 {!editing && <i onClick={() => setEditing(true)} className="fas fa-edit"></i>}
-                {editing && <i onClick={() => setEditing(false)} className="fas fa-check"></i>}
+                {editing && <i onClick={() => saveTitle()} className="fas fa-check"></i>}
             </td>
         </tr>
 

@@ -48,7 +48,6 @@ class CourseManager
     }
 
     updateCourse = (course) => {
-        console.log(course)
         CourseService.updateCourse(course._id, course)
             .then(status => {
                 this.setState((prevState) => ({

@@ -3,6 +3,7 @@ import CourseTable from "./course-table";
 import CourseGrid from "./course-grid";
 import CourseEditor from "./course-editor";
 import {Route} from "react-router-dom";
+import {findAllCourses} from "../services/course-service";
 
 class CourseManager
     extends React.Component {
@@ -16,6 +17,10 @@ class CourseManager
 
         ]
     }
+
+    componentDidMount = () =>
+        findAllCourses()
+            .then(courses => this.setState({courses}))
 
     addCourse = () => {
         const newCourse = {

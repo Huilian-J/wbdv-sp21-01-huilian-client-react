@@ -29,13 +29,11 @@ class CourseManager
     deleteCourse = (courseToDelete) => {
         deleteCourse(courseToDelete._id)
             .then(status => {
-                this.setState((prevState) => {
-                    let nextState = {
-                        ...prevState,
-                        courses:
-                            prevState.courses.filter(course => course != courseToDelete)}
-                    return nextState
-                })
+                this.setState((prevState) => ({
+                    ...prevState,
+                    courses:
+                        prevState.courses.filter(course => course != courseToDelete)
+                }))
             })
     }
 

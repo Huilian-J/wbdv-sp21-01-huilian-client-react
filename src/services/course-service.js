@@ -9,3 +9,10 @@ export const deleteCourse = (courseId) =>
         {method: 'DELETE'})
         .then(response => response.json())
 export const updateCourse = (courseId, course) => {}
+
+export default {
+    findAllCourses,
+    deleteCourse,
+    createCourse,
+    updateCourse
+}

@@ -3,7 +3,7 @@ import CourseTable from "./course-table";
 import CourseGrid from "./course-grid";
 import CourseEditor from "./course-editor";
 import {Route} from "react-router-dom";
-import {findAllCourses, deleteCourse} from "../services/course-service";
+import CourseService from "../services/course-service";
 
 class CourseManager
     extends React.Component {
@@ -13,7 +13,7 @@ class CourseManager
     }
 
     componentDidMount = () =>
-        findAllCourses()
+        CourseService.findAllCourses()
             .then(courses => this.setState({courses}))
 
     addCourse = () => {
@@ -27,7 +27,7 @@ class CourseManager
     }
 
     deleteCourse = (courseToDelete) => {
-        deleteCourse(courseToDelete._id)
+        CourseService.deleteCourse(courseToDelete._id)
             .then(status => {
                 this.setState((prevState) => ({
                     ...prevState,

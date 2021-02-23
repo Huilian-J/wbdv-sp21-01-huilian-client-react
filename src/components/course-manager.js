@@ -22,8 +22,18 @@ class CourseManager
             owner: "New Owner",
             lastModified: "Never"
         }
-        this.state.courses.push(newCourse)
-        this.setState(this.state)
+        CourseService.createCourse(newCourse)
+            .then(course =>
+                this.setState(
+                    (prevState) => ({
+                    ...prevState,
+                        courses: [
+                            ...prevState.courses,
+                            course
+                        ]
+                }))
+            )
+
     }
 
     deleteCourse = (courseToDelete) => {

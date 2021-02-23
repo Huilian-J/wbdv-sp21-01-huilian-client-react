@@ -3,6 +3,9 @@ const COURSES_URL = "https://wbdv-generic-server.herokuapp.com/api/jannunzi/cour
 export const findAllCourses = () =>
     fetch(COURSES_URL)
         .then(response => response.json())
-const createCourse = (course) => {}
-const deleteCourse = (courseId) => {}
-const updateCourse = (courseId, course) => {}
+export const createCourse = (course) => {}
+export const deleteCourse = (courseId) =>
+    fetch(`${COURSES_URL}/{courseId}`,
+        {method: 'DELETE'})
+        .then(response => response.json())
+export const updateCourse = (courseId, course) => {}

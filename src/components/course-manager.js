@@ -2,6 +2,7 @@ import React from 'react'
 import CourseTable from "./course-table";
 import CourseGrid from "./course-grid";
 import CourseEditor from "./course-editor";
+import {Route} from "react-router-dom";
 
 class CourseManager
     extends React.Component {
@@ -36,9 +37,19 @@ class CourseManager
             <div>
                 <h1>Course Manager</h1>
                 <button onClick={this.addCourse}>Add Course</button>
-                <CourseTable deleteCourse={this.deleteCourse} courses={this.state.courses}/>
-                <CourseGrid deleteCourse={this.deleteCourse} courses={this.state.courses}/>
-                <CourseEditor/>
+                <Route path="/courses/table">
+                    <CourseTable
+                        deleteCourse={this.deleteCourse}
+                        courses={this.state.courses}/>
+                </Route>
+                <Route path="/courses/grid">
+                    <CourseGrid
+                        deleteCourse={this.deleteCourse}
+                        courses={this.state.courses}/>
+                </Route>
+                <Route path="/courses/editor"
+                       render={(props) => <CourseEditor prop={props}/>}>
+                </Route>
             </div>
         )
     }

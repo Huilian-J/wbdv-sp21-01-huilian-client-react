@@ -48,7 +48,7 @@ class CourseManager
                         courses={this.state.courses}/>
                 </Route>
                 <Route path="/courses/editor"
-                       render={(props) => <CourseEditor prop={props}/>}>
+                       render={(props) => <CourseEditor {...props}/>}>
                 </Route>
             </div>
         )

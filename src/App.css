@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.wbdv-sticky-nav-bar {
+  position: fixed;
+  width:100%;
+  background-color: white;
+  padding: 10px;
+  z-index: 1;
+}
+
+.wbdv-nav-bar-text {
+  max-height: 40px;
+}
+
+.wbdv-content-blw-bar {
+  padding-top: 58px;
+}
+
+.wbdv-sticky-plus-circle {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.fa-plus-circle {
+  color: red;
+}

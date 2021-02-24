@@ -61,7 +61,7 @@ class CourseManager
     render() {
         return(
             <div>
-                <div className="wbdv-sticky-nav-bar mt-2">
+                <div className="wbdv-sticky-nav-bar">
                     <div className="row">
                         <div className="col-1">
                             <i className="fa fa-bars fa-2x"></i>
@@ -86,21 +86,25 @@ class CourseManager
                         </div>
                     </div>
                 </div>
-
-                <Route path="/courses/table">
-                    <CourseTable
-                        updateCourse={this.updateCourse}
-                        deleteCourse={this.deleteCourse}
-                        courses={this.state.courses}/>
-                </Route>
-                <Route path="/courses/grid">
-                    <CourseGrid
-                        deleteCourse={this.deleteCourse}
-                        courses={this.state.courses}/>
-                </Route>
-                <Route path="/courses/editor"
-                       render={(props) => <CourseEditor {...props}/>}>
-                </Route>
+                <div className="wbdv-content-blw-bar">
+                    <Route path="/courses/table">
+                        <CourseTable
+                            updateCourse={this.updateCourse}
+                            deleteCourse={this.deleteCourse}
+                            courses={this.state.courses}/>
+                    </Route>
+                    <Route path="/courses/grid">
+                        <CourseGrid
+                            deleteCourse={this.deleteCourse}
+                            courses={this.state.courses}/>
+                    </Route>
+                    <Route path="/courses/editor"
+                           render={(props) => <CourseEditor {...props}/>}>
+                    </Route>
+                </div>
+                <div className="wbdv-sticky-plus-circle">
+                    <i className="fa fa-plus-circle fa-3x"></i>
+                </div>
             </div>
         )
     }

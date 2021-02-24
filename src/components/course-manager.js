@@ -103,7 +103,9 @@ class CourseManager
                     </Route>
                 </div>
                 <div className="wbdv-sticky-plus-circle">
-                    <i className="fa fa-plus-circle fa-3x"></i>
+                    <a onClick={this.addCourse}>
+                        <i className="fa fa-plus-circle fa-3x"></i>
+                    </a>
                 </div>
             </div>
         )

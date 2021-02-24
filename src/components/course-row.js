@@ -30,8 +30,8 @@ const CourseRow = ({deleteCourse, updateCourse, course}) => {
                            className="form-control"/>
                 }
             </td>
-            <td>{course.owner}</td>
-            <td>{course.lastModified}</td>
+            <td class="d-none d-md-table-cell">{course.owner}</td>
+            <td class="d-none d-lg-table-cell">{course.lastModified}</td>
             <td>
 
                 {!editing && <i onClick={() => setEditing(true)} className="fas fa-edit"></i>}

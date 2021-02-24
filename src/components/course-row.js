@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
-import {updateCourse} from "../services/course-service";
 
 const CourseRow = ({deleteCourse, updateCourse, course}) => {
 

@@ -9,7 +9,8 @@ class CourseManager
     extends React.Component {
 
     state = {
-        courses: []
+        courses: [],
+        newCourseTitle: "New Course"
     }
 
     componentDidMount = () =>
@@ -18,7 +19,7 @@ class CourseManager
 
     addCourse = () => {
         const newCourse = {
-            title: "New Course",
+            title: this.state.newCourseTitle,
             owner: "New Owner",
             lastModified: "Never"
         }
@@ -69,7 +70,14 @@ class CourseManager
                             <h5>Course Manager</h5>
                         </div>
                         <div className="col-8">
-                            <input className="form-control" placeholder="New Course Title"/>
+                            <input className="form-control"
+                                   placeholder="New Course Title"
+                                   onChange={(event) =>
+                                       this.setState((prevState) => ({
+                                           ...prevState,
+                                           newCourseTitle: event.target.value
+                                       }))
+                                   }/>
                         </div>
                         <div className="col-1">
                             <a onClick={this.addCourse}>

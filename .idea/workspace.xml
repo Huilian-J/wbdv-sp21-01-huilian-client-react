@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-grid/course-grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-table/course-row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-table/course-table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-grid" />
+      <recent name="$PROJECT_DIR$/src/components/course-table" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -63,7 +68,7 @@
       <updated>1613584529981</updated>
       <workItem from="1613584531225" duration="18199000" />
       <workItem from="1614016840592" duration="30121000" />
-      <workItem from="1614118177656" duration="13083000" />
+      <workItem from="1614118177656" duration="14816000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ class CourseManager
 
     state = {
         courses: [],
-        newCourseTitle: "New Course"
+        newCourseTitle: ""
     }
 
     componentDidMount = () =>
@@ -31,7 +31,8 @@ class CourseManager
                         courses: [
                             ...prevState.courses,
                             course
-                        ]
+                        ],
+                        newCourseTitle: ""
                 }))
             )
 
@@ -71,6 +72,7 @@ class CourseManager
                         </div>
                         <div className="col-8">
                             <input className="form-control"
+                                   value={this.state.newCourseTitle}
                                    placeholder="New Course Title"
                                    onChange={(event) =>
                                        this.setState((prevState) => ({

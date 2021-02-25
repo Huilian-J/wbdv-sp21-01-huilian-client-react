@@ -2,7 +2,7 @@ import React from 'react'
 import CourseCard from "./course-card";
 import {Link} from "react-router-dom";
 
-const CourseGrid = ({deleteCourse, courses}) =>
+const CourseGrid = ({deleteCourse, updateCourse, courses}) =>
     <div>
         <table className="table">
             <thead>
@@ -26,6 +26,7 @@ const CourseGrid = ({deleteCourse, courses}) =>
             {
                 courses.map((course, ndx) =>
                     <CourseCard
+                        updateCourse={updateCourse}
                         deleteCourse={deleteCourse}
                         key={ndx}
                         course={course}/>

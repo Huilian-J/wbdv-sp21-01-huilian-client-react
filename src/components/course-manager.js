@@ -95,6 +95,7 @@ class CourseManager
                     </Route>
                     <Route path="/courses/grid">
                         <CourseGrid
+                            updateCourse={this.updateCourse}
                             deleteCourse={this.deleteCourse}
                             courses={this.state.courses}/>
                     </Route>

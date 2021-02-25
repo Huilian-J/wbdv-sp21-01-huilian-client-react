@@ -81,7 +81,7 @@ class CourseManager
                         </div>
                         <div className="col-1">
                             <a onClick={this.addCourse}>
-                                <i className="fas fa-plus-circle fa-2x"></i>
+                                <i className="fas fa-plus-circle fa-2x wbdv-fa-red"></i>
                             </a>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ class CourseManager
                 </div>
                 <div className="wbdv-sticky-plus-circle">
                     <a onClick={this.addCourse}>
-                        <i className="fa fa-plus-circle fa-3x"></i>
+                        <i className="fa fa-plus-circle fa-3x wbdv-fa-red"></i>
                     </a>
                 </div>
             </div>

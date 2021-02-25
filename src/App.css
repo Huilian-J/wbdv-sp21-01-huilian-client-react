@@ -59,8 +59,16 @@
   right: 20px;
 }
 
-.fa-plus-circle {
+.wbdv-fa-red {
   color: red;
+}
+
+.wbdv-fa-green {
+  color: green;
+}
+
+.wbdv-fa-blue {
+  color: blue;
 }
 
 .wbdv-card-icons {

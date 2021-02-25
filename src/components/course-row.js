@@ -39,17 +39,17 @@ const CourseRow = ({deleteCourse, updateCourse, course}) => {
                     setEditing(true)
                     setNewTitle(course.title)
                 }}
-                   className="fas fa-edit"></i>}
+                   className="fas fa-edit wbdv-fa-blue"></i>}
 
                 {editing &&
                 <i onClick={() => saveTitle()}
-                   className="fas fa-check"></i>}
+                   className="fas fa-check wbdv-fa-green"></i>}
 
                 {editing &&
                 <i onClick={() => {
                     setEditing(false)
                     deleteCourse(course)}}
-                   className="fas fa-trash ml-2"></i>}
+                   className="fas fa-times ml-2 wbdv-fa-red"></i>}
             </td>
         </tr>
 

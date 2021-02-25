@@ -62,3 +62,8 @@
 .fa-plus-circle {
   color: red;
 }
+
+.wbdv-card-icons {
+  position:relative;
+  left: 75%;
+}

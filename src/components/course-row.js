@@ -34,9 +34,22 @@ const CourseRow = ({deleteCourse, updateCourse, course}) => {
             <td class="d-none d-lg-table-cell">{course.lastModified}</td>
             <td>
 
-                {!editing && <i onClick={() => setEditing(true)} className="fas fa-edit"></i>}
-                {editing && <i onClick={() => saveTitle()} className="fas fa-check"></i>}
-                <i onClick={() => deleteCourse(course)} className="fas fa-trash ml-2"></i>
+                {!editing &&
+                <i onClick={() => {
+                    setEditing(true)
+                    setNewTitle(course.title)
+                }}
+                   className="fas fa-edit"></i>}
+
+                {editing &&
+                <i onClick={() => saveTitle()}
+                   className="fas fa-check"></i>}
+
+                {editing &&
+                <i onClick={() => {
+                    setEditing(false)
+                    deleteCourse(course)}}
+                   className="fas fa-trash ml-2"></i>}
             </td>
         </tr>
 

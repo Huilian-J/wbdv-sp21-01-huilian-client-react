@@ -1,11 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import moduleReducer from "../../reducers/module-reducer";
+import lessonReducer from "../../reducers/lesson-reducer";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 import ModuleList from "./module-list";
+import LessonTabs from "./lesson-tabs";
 
-const store = createStore(moduleReducer)
+const store = createStore(lessonReducer)
 
 const CourseEditor = ({history}) =>
     <Provider store={store}>
@@ -20,41 +22,9 @@ const CourseEditor = ({history}) =>
             <div className="row">
                 <div className="col-4">
                     <ModuleList/>
-                    <ul className="list-group">
-                        <li className="list-group-item">
-                            Module 1 - jQuery
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item active">
-                            Module 2 - React
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            Module 3 - Redux
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            Module 4 - Native
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            Module 5 - Angular
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            Module 6 - Node
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            Module 7 - Mongo
-                            <i className="fa fa-times float-right"></i>
-                        </li>
-                        <li className="list-group-item">
-                            <i className="fa fa-plus float-right"></i>
-                        </li>
-                    </ul>
                 </div>
                 <div className="col-8">
+                    <LessonTabs/>
                     <ul className="nav nav-tabs wbdv-nav-tabs">
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="#">Build</a>

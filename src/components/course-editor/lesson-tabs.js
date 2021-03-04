@@ -19,7 +19,7 @@ const LessonTabs = (
     </div>
 
 const stpm = (state) => ({
-    lessons: state.lessons
+    lessons: state.lessonReducer.lessons
 })
 
 const dtpm = (dispatch) => {}

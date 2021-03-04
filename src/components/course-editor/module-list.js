@@ -19,7 +19,7 @@ const ModuleList = (
     </div>
 
 const stpm = (state) => ({
-    modules: state.modules
+    modules: state.moduleReducer.modules
 })
 
 const dtpm = (dispatch) => {}

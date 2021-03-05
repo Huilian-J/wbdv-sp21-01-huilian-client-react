@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 const EditableItem = (
     {
         item,
-        updateItem
+        updateItem,
+        deleteItem
     }) => {
     const [editing, setEditing] = useState(false)
     const [itemCache, setItemCache] = useState(item)
@@ -30,7 +31,9 @@ const EditableItem = (
                         setEditing(false)
                         updateItem(itemCache)}}
                        className="fas fa-check"></i>
-                    <i className="fas fa-times"></i>
+                    <i onClick={() => {
+                        deleteItem(item)}}
+                       className="fas fa-times"></i>
                 </>
             }
 

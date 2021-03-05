@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
 
-const EditableItem = ({item}) => {
+const EditableItem = (
+    {
+        item,
+        updateItem
+    }) => {
     const [editing, setEditing] = useState(false)
     const [itemCache, setItemCache] = useState(item)
 
@@ -22,7 +26,10 @@ const EditableItem = ({item}) => {
                     <input
                         onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
                         value={itemCache.title}/>
-                    <i onClick={() => setEditing(false)} className="fas fa-check"></i>
+                    <i onClick={() => {
+                        setEditing(false)
+                        updateItem(itemCache)}}
+                       className="fas fa-check"></i>
                     <i className="fas fa-times"></i>
                 </>
             }

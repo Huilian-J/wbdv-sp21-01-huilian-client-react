@@ -3,7 +3,8 @@ import {connect} from "react-redux"
 
 const ModuleList = (
     {
-        modules=[]
+        modules=[],
+        createModule
     }) =>
     <div>
         <h2>Module List</h2>
@@ -15,6 +16,9 @@ const ModuleList = (
                     </li>
                 )
             }
+            <li className="list-group-item">
+                <i onClick={createModule} className="fas fa-plus fa-2x"></i>
+            </li>
         </ul>
     </div>
 
@@ -22,6 +26,10 @@ const stpm = (state) => ({
     modules: state.moduleReducer.modules
 })
 
-const dtpm = (dispatch) => {}
+const dtpm = (dispatch) => ({
+    createModule: () => {
+        dispatch({type: "CREATE_MODULE"})
+    }
+})
 
 export default connect(stpm, dtpm)(ModuleList)

@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from "react-redux"
+import EditableItem from "../editable-item";
 
 const LessonTabs = (
     {
@@ -11,7 +12,9 @@ const LessonTabs = (
             {
                 lessons.map(lesson =>
                     <li className="nav-iem">
-                        <a class="nav-link" href="#">{lesson.title}</a>
+                        <a class="nav-link" href="#">
+                            <EditableItem item={lesson}/>
+                        </a>
                     </li>
                 )
             }

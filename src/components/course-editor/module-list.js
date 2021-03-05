@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from "react-redux"
+import EditableItem from "../editable-item";
 
 const ModuleList = (
     {
@@ -12,7 +13,7 @@ const ModuleList = (
             {
                 modules.map(module =>
                     <li className="list-group-item">
-                        {module.title}
+                        <EditableItem item={module}/>
                     </li>
                 )
             }

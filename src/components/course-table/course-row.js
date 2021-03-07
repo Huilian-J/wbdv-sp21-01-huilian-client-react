@@ -19,7 +19,7 @@ const CourseRow = ({deleteCourse, updateCourse, course}) => {
             <td>
                 {
                     !editing &&
-                    <Link to="/courses/editor">
+                    <Link to="/editor">
                         {course.title}
                     </Link>
                 }

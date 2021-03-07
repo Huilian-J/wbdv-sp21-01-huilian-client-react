@@ -1,7 +1,6 @@
 import React from 'react'
 import CourseTable from "./course-table/course-table";
 import CourseGrid from "./course-grid/course-grid";
-import CourseEditor from "./course-editor/course-editor";
 import {Route} from "react-router-dom";
 import CourseService from "../services/course-service";
 
@@ -89,20 +88,17 @@ class CourseManager
                     </div>
                 </div>
                 <div className="wbdv-content-blw-bar">
-                    <Route path="/courses/table">
+                    <Route path="/courses/table" exact={true}>
                         <CourseTable
                             updateCourse={this.updateCourse}
                             deleteCourse={this.deleteCourse}
                             courses={this.state.courses}/>
                     </Route>
-                    <Route path="/courses/grid">
+                    <Route path="/courses/grid" exact={true}>
                         <CourseGrid
                             updateCourse={this.updateCourse}
                             deleteCourse={this.deleteCourse}
                             courses={this.state.courses}/>
-                    </Route>
-                    <Route path="/courses/editor"
-                           render={(props) => <CourseEditor {...props}/>}>
                     </Route>
                 </div>
                 <div className="wbdv-sticky-plus-circle">

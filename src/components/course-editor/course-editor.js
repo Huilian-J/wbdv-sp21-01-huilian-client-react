@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, useParams, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import moduleReducer from "../../reducers/module-reducer";
 import lessonReducer from "../../reducers/lesson-reducer";
 import {combineReducers, createStore} from "redux";
@@ -14,8 +14,7 @@ const reducer = combineReducers({
 
 const store = createStore(reducer)
 
-const CourseEditor = ({history, params}) => {
-    const {layout, courseId} = useParams();
+const CourseEditor = ({history}) => {
     return (
         <Provider store={store}>
             <div>

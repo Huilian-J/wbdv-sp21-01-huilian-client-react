@@ -1,17 +1,21 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {connect} from "react-redux"
 import EditableItem from "../editable-item";
 import {useParams} from "react-router-dom";
+import {findModulesForCourse} from "../../services/module-service"
 
 const ModuleList = (
     {
         modules=[],
         createModule,
         updateModule,
-        deleteModule
+        deleteModule,
+        findModulesForCourse
     }) => {
     const {layout, courseId, moduleId} = useParams();
-
+    useEffect(()=> {
+        findModulesForCourse(courseId)
+    },[])
     return (
         <div>
             <h2>Module List</h2>
@@ -53,6 +57,13 @@ const dtpm = (dispatch) => ({
     },
     deleteModule: (itemToDelete) => {
         dispatch({type: "DELETE_MODULE", moduleToDelete: itemToDelete})
+    },
+    findModulesForCourse: (courseId) => {
+        findModulesForCourse(courseId)
+            .then(modules => dispatch({
+                type: "FIND_MODULES_FOR_COURSE",
+                modules: modules
+            }))
     }
 })
 

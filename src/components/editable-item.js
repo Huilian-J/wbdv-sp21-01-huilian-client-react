@@ -10,7 +10,15 @@ const EditableItem = (
         active
     }) => {
     const [editing, setEditing] = useState(false)
-    const [itemCache, setItemCache] = useState(item)
+    const [newTitle, setItemTitle] = useState(item.title)
+    const saveItemTitle = () => {
+        setEditing(false)
+        const newItem = {
+            ...item,
+            title: newTitle
+        }
+        updateItem(newItem)
+    }
 
     return(
         <>
@@ -20,20 +28,23 @@ const EditableItem = (
                     <Link className={`nav-link ${active? 'active' : ''}`} to={to}>
                         {item.title}
                     </Link>
-                    <i onClick={() => setEditing(true)} className="fas fa-edit"></i>
+                    <i onClick={() => {
+                        setEditing(true)
+                        setItemTitle(item.title)
+                    }}
+                       className="fas fa-edit"></i>
                 </>
             }
             {
                 editing &&
                 <>
                     <input
-                        onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
-                        value={itemCache.title}/>
-                    <i onClick={() => {
-                        setEditing(false)
-                        updateItem(itemCache)}}
+                        onChange={(e) => setItemTitle(e.target.value)}
+                        value={newTitle}/>
+                    <i onClick={() => saveItemTitle()}
                        className="fas fa-check"></i>
                     <i onClick={() => {
+                        setEditing(false)
                         deleteItem(item)}}
                        className="fas fa-times"></i>
                 </>

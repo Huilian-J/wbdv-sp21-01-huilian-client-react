@@ -6,6 +6,7 @@ import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import ModuleList from "./module-list";
 import LessonTabs from "./lesson-tabs";
+import {useParams} from "react-router-dom";
 
 const reducer = combineReducers({
     moduleReducer: moduleReducer,
@@ -15,14 +16,14 @@ const reducer = combineReducers({
 const store = createStore(reducer)
 
 const CourseEditor = ({history}) => {
+    const {layout, courseId, moduleId, lessonId} = useParams();
     return (
         <Provider store={store}>
             <div>
                 <h2>
-                    <a className="btn margin-left-10">
-                        <i onClick={() => history.goBack()}
-                           className="fa fa-times fa-2x"></i>
-                    </a>
+                    <Link to={`/courses/${layout}`} className="btn margin-left-10">
+                        <i className="fa fa-times fa-2x"></i>
+                    </Link>
                     <i className="margin-left-10">CSXXXX - Course</i>
                 </h2>
                 <div className="row">

@@ -15,6 +15,16 @@ export const findModulesForCourse = (courseId) =>
     fetch(`${COURSES_URL}/${courseId}/modules`)
         .then(response => response.json());
 
+export const updateModule = (moduleId, module) =>
+    fetch(`${MODULES_URL}/${moduleId}`,{
+        method:"PUT",
+        body: JSON.stringify(module),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(response => response.json());
+
 export const deleteModule = (moduleId) =>
     fetch(`${MODULES_URL}/${moduleId}`, {
         method:"DELETE"
@@ -22,7 +32,7 @@ export const deleteModule = (moduleId) =>
         .then(response => response.json());
 
 const api = {
-    createModule, findModulesForCourse, deleteModule
+    createModule, findModulesForCourse, updateModule, deleteModule
 }
 
 export default api

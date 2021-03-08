@@ -54,12 +54,13 @@ const dtpm = (dispatch) => ({
             .then(module => dispatch({type: "CREATE_MODULE", module: module}))
     },
     updateModule: (newItem) => {
-        dispatch({type: "UPDATE_MODULE", updateModule: newItem})
+        moduleService.updateModule(newItem._id, newItem)
+            .then(status => dispatch({type: "UPDATE_MODULE", updateModule: newItem}))
     },
     deleteModule: (moduleToDelete) => {
         moduleService.deleteModule(moduleToDelete._id)
             .then(status => dispatch({type: "DELETE_MODULE", moduleToDelete: moduleToDelete}))
-        
+
     },
     findModulesForCourse: (courseId) => {
         moduleService.findModulesForCourse(courseId)

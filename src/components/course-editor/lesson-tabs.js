@@ -3,12 +3,13 @@ import {connect} from "react-redux"
 import EditableItem from "../editable-item";
 import {useParams} from "react-router-dom";
 import lessonService, {findLessonsForModule} from '../../services/lesson-service'
-import {findModulesForCourse} from "../../services/module-service";
 
 const LessonTabs = (
     {
         lessons=[],
         createLesson,
+        updateLesson,
+        deleteLesson,
         findLessonsForModule
     }) =>
 {
@@ -27,6 +28,8 @@ const LessonTabs = (
                         <li className="nav-item">
                             <EditableItem
                                 to={`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
+                                deleteItem={deleteLesson}
+                                updateItem={updateLesson}
                                 active={lesson._id === lessonId}
                                 item={lesson}/>
                         </li>
@@ -53,11 +56,24 @@ const dtpm = (dispatch) => ({
             }))
     },
     createLesson: (moduleId) => {
-        console.log("CREATE" + moduleId)
         lessonService.createLesson(moduleId, {title: "New Lesson"})
             .then(lesson => dispatch({
                 type: "CREATE_LESSON",
                 lesson: lesson
+            }))
+    },
+    updateLesson: (newItem) => {
+        lessonService.updateLesson(newItem._id, newItem)
+            .then(status => dispatch({
+                type: "UPDATE_LESSON",
+                updateLesson: newItem
+            }))
+    },
+    deleteLesson: (lessonToDelete) => {
+        lessonService.deleteLesson(lessonToDelete._id)
+            .then(status => dispatch({
+                type: "DELETE_LESSON",
+                lessonToDelete: lessonToDelete
             }))
     }
 })

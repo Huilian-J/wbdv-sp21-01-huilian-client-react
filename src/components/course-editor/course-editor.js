@@ -31,25 +31,6 @@ const CourseEditor = ({history}) => {
                     </div>
                     <div className="col-8">
                         <LessonTabs/>
-                        <ul className="nav nav-pills">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Topic 1</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Topic 2</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Topic 3</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Topic 4</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    <i className="fa fa-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
                         <div className="margin-top-10">
                             Widget content here.
                         </div>
@@ -59,6 +40,5 @@ const CourseEditor = ({history}) => {
         </Provider>
     )
 }
-
 
 export default CourseEditor

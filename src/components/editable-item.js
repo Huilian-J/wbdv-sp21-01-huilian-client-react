@@ -24,16 +24,15 @@ const EditableItem = (
         <>
             {
                 !editing &&
-                <>
-                    <Link className={`nav-link ${active? 'active' : ''}`} to={to}>
-                        {item.title}
-                    </Link>
+                <Link className={`nav-link ${active? 'active' : ''}`} to={to}>
+                    {item.title}
                     <i onClick={() => {
                         setEditing(true)
-                        setItemTitle(item.title)
-                    }}
-                       className="fas fa-edit"></i>
-                </>
+                        setItemTitle(item.title)}}
+                       className="fas fa-pencil-alt float-right ml-1 mt-1">
+                    </i>
+                </Link>
+
             }
             {
                 editing &&
@@ -42,14 +41,13 @@ const EditableItem = (
                         onChange={(e) => setItemTitle(e.target.value)}
                         value={newTitle}/>
                     <i onClick={() => saveItemTitle()}
-                       className="fas fa-check"></i>
+                        className="fas fa-check float-right mt-2"></i>
                     <i onClick={() => {
                         setEditing(false)
                         deleteItem(item)}}
-                       className="fas fa-times"></i>
+                        className="fas fa-times float-right mr-2 ml-2 mt-2"></i>
                 </>
             }
-
         </>
     )
 }

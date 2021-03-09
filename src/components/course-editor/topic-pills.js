@@ -40,7 +40,7 @@ const TopicPills = (
                 {
                     ((moduleId !== "undefined" && typeof moduleId !== "undefined") &&
                         (lessonId !== "undefined" && typeof lessonId !== "undefined")) &&
-                    <li className="nav-iem">
+                    <li className="nav-item">
                         <i onClick={() => createTopic(lessonId)} className="fas fa-plus fa-2x"></i>
                     </li>
                 }

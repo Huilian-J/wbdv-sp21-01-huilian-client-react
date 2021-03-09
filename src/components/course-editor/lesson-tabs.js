@@ -37,7 +37,7 @@ const LessonTabs = (
                 }
                 {
                     (moduleId !== "undefined" && typeof moduleId !== "undefined") &&
-                    <li className="nav-iem">
+                    <li className="nav-item">
                         <i onClick={() => createLesson(moduleId)} className="fas fa-plus fa-2x"></i>
                     </li>
                 }

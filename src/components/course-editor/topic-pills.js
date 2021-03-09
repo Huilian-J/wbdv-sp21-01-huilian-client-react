@@ -27,7 +27,7 @@ const TopicPills = (
                     ((moduleId !== "undefined" && typeof moduleId !== "undefined") &&
                         (lessonId !== "undefined" && typeof lessonId !== "undefined")) &&
                     topics.map(topic =>
-                        <li className="nav-item">
+                        <li className="nav-item" key={topic._id}>
                             <EditableItem
                                 to={`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
                                 deleteItem={deleteTopic}

@@ -25,7 +25,7 @@ const LessonTabs = (
                 {
                     (moduleId !== "undefined" && typeof moduleId !== "undefined") &&
                     lessons.map(lesson =>
-                        <li className="nav-item">
+                        <li className="nav-item" key={lesson._id}>
                             <EditableItem
                                 to={`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
                                 deleteItem={deleteLesson}

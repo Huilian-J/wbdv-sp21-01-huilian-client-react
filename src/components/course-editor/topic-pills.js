@@ -15,16 +15,17 @@ const TopicPills = (
 {
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     useEffect(()=> {
-        if((moduleId !== "undefined" && typeof moduleId !== "undefined") ||
+        if((moduleId !== "undefined" && typeof moduleId !== "undefined") &&
             (lessonId !== "undefined" && typeof lessonId !== "undefined")) {
             findTopicsForLesson(lessonId)
         }
     }, [lessonId])
     return(
         <div>
-            <h2>Topic Pills</h2>
             <ul className="nav nav-pills">
                 {
+                    ((moduleId !== "undefined" && typeof moduleId !== "undefined") &&
+                        (lessonId !== "undefined" && typeof lessonId !== "undefined")) &&
                     topics.map(topic =>
                         <li className="nav-item">
                             <EditableItem
@@ -36,9 +37,13 @@ const TopicPills = (
                         </li>
                     )
                 }
-                <li className="nav-iem">
-                    <i onClick={() => createTopic(lessonId)} className="fas fa-plus fa-2x"></i>
-                </li>
+                {
+                    ((moduleId !== "undefined" && typeof moduleId !== "undefined") &&
+                        (lessonId !== "undefined" && typeof lessonId !== "undefined")) &&
+                    <li className="nav-iem">
+                        <i onClick={() => createTopic(lessonId)} className="fas fa-plus fa-2x"></i>
+                    </li>
+                }
             </ul>
         </div>
     )

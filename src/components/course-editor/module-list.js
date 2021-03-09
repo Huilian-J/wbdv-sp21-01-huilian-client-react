@@ -18,7 +18,6 @@ const ModuleList = (
     },[])
     return (
         <div>
-            <h2>Module List</h2>
             <ul className="list-group">
                 {
                     modules.map(module =>

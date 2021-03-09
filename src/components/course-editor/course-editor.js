@@ -18,7 +18,7 @@ const reducer = combineReducers({
 
 const store = createStore(reducer)
 
-const CourseEditor = ({history}) => {
+const CourseEditor = () => {
     const {layout, courseId, moduleId, lessonId} = useParams();
     return (
         <Provider store={store}>

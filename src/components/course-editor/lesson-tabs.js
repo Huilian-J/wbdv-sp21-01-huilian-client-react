@@ -21,9 +21,9 @@ const LessonTabs = (
     }, [moduleId])
     return(
         <div>
-            <h2>Lesson Tabs</h2>
             <ul className="nav nav-tabs">
                 {
+                    (moduleId !== "undefined" && typeof moduleId !== "undefined") &&
                     lessons.map(lesson =>
                         <li className="nav-item">
                             <EditableItem
@@ -35,9 +35,12 @@ const LessonTabs = (
                         </li>
                     )
                 }
-                <li className="nav-iem">
-                    <i onClick={() => createLesson(moduleId)} className="fas fa-plus fa-2x"></i>
-                </li>
+                {
+                    (moduleId !== "undefined" && typeof moduleId !== "undefined") &&
+                    <li className="nav-iem">
+                        <i onClick={() => createLesson(moduleId)} className="fas fa-plus fa-2x"></i>
+                    </li>
+                }
             </ul>
         </div>
     )

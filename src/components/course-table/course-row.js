@@ -30,8 +30,8 @@ const CourseRow = ({deleteCourse, updateCourse, course}) => {
                            className="form-control"/>
                 }
             </td>
-            <td class="d-none d-md-table-cell">{course.owner}</td>
-            <td class="d-none d-lg-table-cell">{course.lastModified}</td>
+            <td className="d-none d-md-table-cell">{course.owner}</td>
+            <td className="d-none d-lg-table-cell">{course.lastModified}</td>
             <td>
 
                 {!editing &&

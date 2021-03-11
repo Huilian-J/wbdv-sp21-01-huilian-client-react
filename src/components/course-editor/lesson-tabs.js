@@ -74,10 +74,13 @@ const dtpm = (dispatch) => ({
     },
     deleteLesson: (lessonToDelete) => {
         lessonService.deleteLesson(lessonToDelete._id)
-            .then(status => dispatch({
-                type: "DELETE_LESSON",
-                lessonToDelete: lessonToDelete
-            }))
+            .then(status => {
+                dispatch({
+                    type: "DELETE_LESSON",
+                    lessonToDelete: lessonToDelete
+                })
+                dispatch({type: "FIND_TOPICS_FOR_LESSON", topics: []})
+            })
     }
 })
 

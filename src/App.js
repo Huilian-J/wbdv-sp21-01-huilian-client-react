@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
           <div className="container-fluid">
               <Route path="/" exact={true} component={Home}/>
-              <Route path="/courses" component={CourseManager}/>
+              <Route path="/courses/:layout" exact={true} component={CourseManager}/>
               <Route path={[
                   "/courses/:layout/edit/:courseId",
                   "/courses/:layout/edit/:courseId/modules/:moduleId",

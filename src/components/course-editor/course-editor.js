@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from "react-router-dom";
 import moduleReducer from "../../reducers/module-reducer";
 import lessonReducer from "../../reducers/lesson-reducer";
@@ -9,6 +9,7 @@ import LessonTabs from "./lesson-tabs";
 import {useParams} from "react-router-dom";
 import TopicPills from "./topic-pills";
 import topicReducer from "../../reducers/topic-reducer";
+import courseService from "../../services/course-service"
 
 const reducer = combineReducers({
     moduleReducer: moduleReducer,
@@ -20,6 +21,12 @@ const store = createStore(reducer)
 
 const CourseEditor = () => {
     const {layout, courseId, moduleId, lessonId} = useParams();
+    const [courseTitle, setCourseTitle] = useState("")
+    useEffect(()=> {
+        courseService.findCourseById(courseId)
+            .then(course => setCourseTitle(course.title))
+    }, [])
+
     return (
         <Provider store={store}>
             <div>
@@ -27,7 +34,7 @@ const CourseEditor = () => {
                     <Link to={`/courses/${layout}`} className="btn margin-left-10">
                         <i className="fa fa-times fa-2x"></i>
                     </Link>
-                    <i className="margin-left-10">CSXXXX - Course</i>
+                    <i className="margin-left-10">{courseTitle}</i>
                 </h2>
                 <div className="row">
                     <div className="col-4">

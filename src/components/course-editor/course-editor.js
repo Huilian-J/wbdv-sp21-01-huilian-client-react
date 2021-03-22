@@ -38,10 +38,10 @@ const CourseEditor = () => {
                     <i className="margin-left-10">{courseTitle}</i>
                 </h2>
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-3">
                         <ModuleList/>
                     </div>
-                    <div className="col-8">
+                    <div className="col-9">
                         <LessonTabs/>
                         <TopicPills/>
                         <WidgetList/>

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/actions/module-actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
       <workItem from="1614562971843" duration="16151000" />
       <workItem from="1614875176233" duration="61646000" />
       <workItem from="1616171497047" duration="364000" />
-      <workItem from="1616380507758" duration="1652000" />
+      <workItem from="1616380507758" duration="9372000" />
     </task>
     <servers />
   </component>

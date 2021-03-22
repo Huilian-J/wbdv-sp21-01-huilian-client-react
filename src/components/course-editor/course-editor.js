@@ -10,6 +10,7 @@ import {useParams} from "react-router-dom";
 import TopicPills from "./topic-pills";
 import topicReducer from "../../reducers/topic-reducer";
 import courseService from "../../services/course-service"
+import WidgetList from "./widgets/widget-list";
 
 const reducer = combineReducers({
     moduleReducer: moduleReducer,
@@ -43,9 +44,7 @@ const CourseEditor = () => {
                     <div className="col-8">
                         <LessonTabs/>
                         <TopicPills/>
-                        <div className="margin-top-10">
-                            Widget content here.
-                        </div>
+                        <WidgetList/>
                     </div>
                 </div>
             </div>

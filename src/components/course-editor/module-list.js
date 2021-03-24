@@ -59,6 +59,7 @@ const dtpm = (dispatch) => ({
                 dispatch({type: "DELETE_MODULE", moduleToDelete: moduleToDelete})
                 dispatch({type: "FIND_LESSONS_FOR_MODULE", lessons: []})
                 dispatch({type: "FIND_TOPICS_FOR_LESSON", topics: []})
+                dispatch({type: "FIND_WIDGETS_FOR_TOPIC", widgets: []})
             })
 
     },

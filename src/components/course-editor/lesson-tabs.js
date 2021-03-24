@@ -80,6 +80,7 @@ const dtpm = (dispatch) => ({
                     lessonToDelete: lessonToDelete
                 })
                 dispatch({type: "FIND_TOPICS_FOR_LESSON", topics: []})
+                dispatch({type: "FIND_WIDGETS_FOR_TOPIC", widgets: []})
             })
     }
 })

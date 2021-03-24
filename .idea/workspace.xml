@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/actions/module-actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/widget-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/module-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,7 @@
       <workItem from="1614562971843" duration="16151000" />
       <workItem from="1614875176233" duration="61646000" />
       <workItem from="1616171497047" duration="364000" />
-      <workItem from="1616380507758" duration="9372000" />
+      <workItem from="1616380507758" duration="40107000" />
     </task>
     <servers />
   </component>
@@ -124,10 +125,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="126" y="69" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1615746133387" />
-    <state x="385" y="140" width="670" height="761" key="search.everywhere.popup" timestamp="1614807391252">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="385" y="152" width="670" height="690" key="search.everywhere.popup" timestamp="1616547736358">
+      <screen x="0" y="25" width="1440" height="815" />
     </state>
-    <state x="385" y="140" width="670" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1614807391252" />
+    <state x="385" y="140" width="670" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1616414711855" />
     <state x="385" y="149" width="670" height="676" key="search.everywhere.popup/0.25.1440.800@0.25.1440.800" timestamp="1614018116150" />
+    <state x="385" y="150" width="670" height="680" key="search.everywhere.popup/0.25.1440.804@0.25.1440.804" timestamp="1616394949483" />
+    <state x="385" y="152" width="670" height="690" key="search.everywhere.popup/0.25.1440.815@0.25.1440.815" timestamp="1616547736358" />
   </component>
 </project>

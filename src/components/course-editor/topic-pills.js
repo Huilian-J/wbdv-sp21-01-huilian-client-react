@@ -77,10 +77,10 @@ const dtpm = (dispatch) => ({
     },
     deleteTopic: (topicToDelete) => {
         topicService.deleteTopic(topicToDelete._id)
-            .then(status => dispatch({
-                type: "DELETE_TOPIC",
-                topicToDelete: topicToDelete
-            }))
+            .then(status => {
+                dispatch({type: "DELETE_TOPIC", topicToDelete: topicToDelete})
+                dispatch({type: "FIND_WIDGETS_FOR_TOPIC", widgets: []})
+            })
     }
 })
 

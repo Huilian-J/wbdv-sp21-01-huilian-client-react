@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react'
 import HeadingWidget from "./heading-widget";
 import ParagraphWidget from "./paragraph-widget";
 import {useParams} from "react-router-dom";
-import widgetService from "../../../services/widget-service";
+import widgetActions from "../../../actions/widget-actions";
 
 const WidgetList = (
     {
@@ -63,36 +63,10 @@ const stpm = (state) => ({
 })
 
 const dtpm = (dispatch) => ({
-    createWidget: (topicId) => {
-        widgetService.createWidget(topicId, {type: "HEADING", size:1, text: "New Widget"})
-            .then(widget => dispatch({
-                type: "CREATE_WIDGET",
-                widget: widget
-            }))
-    },
-    updateWidget: (wid, newItem) => {
-        widgetService.updateWidget(wid, newItem)
-            .then(status => dispatch({
-                type: "UPDATE_WIDGET",
-                wid: wid,
-                newItem: newItem
-            }))
-    },
-    deleteWidget: (wid) => {
-        widgetService.deleteWidget(wid)
-            .then(status =>
-                dispatch({
-                    type: "DELETE_WIDGET",
-                    widgetToDelete: wid
-                }))
-    },
-    findWidgetsForTopic: (topicId) => {
-        widgetService.findWidgetsForTopic(topicId)
-            .then(widgets => dispatch({
-                type: "FIND_WIDGETS_FOR_TOPIC",
-                widgets: widgets
-            }))
-    }
+    createWidget: (topicId) => widgetActions.createWidget(dispatch, topicId),
+    updateWidget: (wid, newItem) => widgetActions.updateWidget(dispatch, wid, newItem),
+    deleteWidget: (wid) => widgetActions.deleteWidget(dispatch, wid),
+    findWidgetsForTopic: (topicId) => widgetActions.findWidgetsForTopic(dispatch, topicId)
 })
 
 export default connect(stpm, dtpm)(WidgetList)

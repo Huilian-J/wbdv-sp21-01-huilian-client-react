@@ -12,7 +12,7 @@ const HeadingWidget = ({widget, updateWidget, deleteWidget}) => {
                         <>
                             <select
                                 onChange={(e) => {
-                                    setWidget({...widget, type: e.target.value})
+                                    setWidget({...w, type: e.target.value})
                                 }}
                                 value={w.type}
                                 className="form-control">
@@ -21,14 +21,14 @@ const HeadingWidget = ({widget, updateWidget, deleteWidget}) => {
                             </select>
                             <input
                                 onChange={(e) => {
-                                    setWidget({...widget, text: e.target.value})
+                                    setWidget({...w, text: e.target.value})
                                 }}
                                 value={w.text}
                                 className="form-control"/>
                             <select
                                 onChange={(e) => {
                                     console.log(e.target.value)
-                                    setWidget({...widget, size: parseInt(e.target.value)})
+                                    setWidget({...w, size: parseInt(e.target.value)})
                                 }}
                                 value={w.size}
                                 className="form-control">

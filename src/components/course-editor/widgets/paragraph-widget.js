@@ -12,7 +12,7 @@ const ParagraphWidget = ({widget, updateWidget, deleteWidget}) => {
                         <>
                             <select
                                 onChange={(e) => {
-                                    setWidget({...widget, type: e.target.value})
+                                    setWidget({...w, type: e.target.value})
                                 }}
                                 value={w.type}
                                 className="form-control">
@@ -21,7 +21,7 @@ const ParagraphWidget = ({widget, updateWidget, deleteWidget}) => {
                             </select>
                             <textarea
                                 onChange={(e) => {
-                                    setWidget({...widget, text: e.target.value})
+                                    setWidget({...w, text: e.target.value})
                                 }}
                                 value={w.text}
                                 className="form-control"></textarea>

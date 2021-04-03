@@ -13,19 +13,19 @@ const ImageWidget = ({widget, deleteWidget, updateWidget}) => {
                             <>
                                 <input
                                     onChange={(e) => {
-                                        setWidget({...widget, src: e.target.value})
+                                        setWidget({...w, src: e.target.value})
                                     }}
                                     value={w.src}
                                     className="form-control"/>
                                 <input
                                     onChange={(e) => {
-                                        setWidget({...widget, width: e.target.value})
+                                        setWidget({...w, width: e.target.value})
                                     }}
                                     value={w.width}
                                     className="form-control"/>
                                 <input
                                     onChange={(e) => {
-                                        setWidget({...widget, height: e.target.value})
+                                        setWidget({...w, height: e.target.value})
                                     }}
                                     value={w.height}
                                     className="form-control"/>

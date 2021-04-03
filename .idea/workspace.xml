@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducers/widget-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/list-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/module-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +50,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />

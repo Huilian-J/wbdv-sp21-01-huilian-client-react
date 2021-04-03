@@ -24,7 +24,7 @@ const ListWidget = ({widget, deleteWidget, updateWidget}) => {
                                     setWidget({...w, text: e.target.value})
                                 }}
                                 value={w.text}
-                                row={10}
+                                rows="10"
                                 className="form-control">
                             </textarea>
                         </>

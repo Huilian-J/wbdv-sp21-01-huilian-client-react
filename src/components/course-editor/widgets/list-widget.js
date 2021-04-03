@@ -12,7 +12,8 @@ const ListWidget = ({widget, deleteWidget, updateWidget}) => {
                         <>
                             <input
                                 onChange={(e) => {
-                                    setWidget({...w, ordered: e.target.value})
+                                    setWidget({...w, ordered: e.target.checked})
+                                    console.log(e.target.value)
                                 }}
                                 checked={w.ordered}
                                 type="checkbox"/> Ordered

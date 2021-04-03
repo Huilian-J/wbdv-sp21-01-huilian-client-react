@@ -11,13 +11,16 @@ const ListWidget = ({widget, deleteWidget, updateWidget}) => {
                         editing &&
                         <>
                             <input
-                                checked={widget.ordered}
+                                onChange={(e) => {
+                                    setWidget({...w, ordered: e.target.value})
+                                }}
+                                checked={w.ordered}
                                 type="checkbox"/> Ordered
                             <br/>
                             List Items
                             <textarea
                                 onChange={(e) => {
-                                    setWidget({...widget, text: e.target.value})
+                                    setWidget({...w, text: e.target.value})
                                 }}
                                 value={w.text}
                                 row={10}

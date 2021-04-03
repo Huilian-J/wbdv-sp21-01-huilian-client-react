@@ -6,6 +6,7 @@ import ParagraphWidget from "./paragraph-widget";
 import {useParams} from "react-router-dom";
 import widgetActions from "../../../actions/widget-actions";
 import ListWidget from "./list-widget";
+import ImageWidget from "./image-widget";
 
 const WidgetList = (
     {
@@ -54,6 +55,13 @@ const WidgetList = (
                         {
                             w.type === "LIST" &&
                             <ListWidget
+                                deleteWidget={deleteWidget}
+                                updateWidget={updateWidget}
+                                widget={w}/>
+                        }
+                        {
+                            w.type === "IMAGE" &&
+                            <ImageWidget
                                 deleteWidget={deleteWidget}
                                 updateWidget={updateWidget}
                                 widget={w}/>

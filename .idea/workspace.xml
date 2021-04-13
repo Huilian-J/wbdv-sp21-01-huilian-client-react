@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,7 @@
       <workItem from="1614875176233" duration="61646000" />
       <workItem from="1616171497047" duration="364000" />
       <workItem from="1616380507758" duration="40107000" />
-      <workItem from="1618276490998" duration="8346000" />
+      <workItem from="1618276490998" duration="8770000" />
     </task>
     <servers />
   </component>

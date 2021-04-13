@@ -25,7 +25,14 @@ const MultipleChoiceQuestion = ({question}) => {
                 {
                     question.choices.map((choice) => {
                         return(
-                            <li className="list-group-item">
+                            <li
+                                className={`list-group-item 
+                                ${grade && question.correct === choice? "list-group-item-success" : ""}
+                                ${grade && 
+                                    question.correct !== choice && 
+                                    answer !== question.correct &&
+                                    answer === choice?
+                                    "list-group-item-danger" : ""}`}>
                                 <label>
                                     <input
                                         onClick={() => setAnswer(choice)}

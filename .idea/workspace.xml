@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/quiz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-table/course-row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-table/course-row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-table/course-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-table/course-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/quizzes/questions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,7 +45,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/quizzes/questions" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/quizzes/questions" />
       <recent name="$PROJECT_DIR$/src/components/course-editor" />
       <recent name="$PROJECT_DIR$/src/components/course-grid" />
       <recent name="$PROJECT_DIR$/src/components/course-table" />
@@ -88,7 +93,7 @@
       <workItem from="1614875176233" duration="61646000" />
       <workItem from="1616171497047" duration="364000" />
       <workItem from="1616380507758" duration="40107000" />
-      <workItem from="1618276490998" duration="1898000" />
+      <workItem from="1618276490998" duration="5025000" />
     </task>
     <servers />
   </component>

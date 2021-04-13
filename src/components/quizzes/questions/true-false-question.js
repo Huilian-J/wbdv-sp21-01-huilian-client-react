@@ -22,7 +22,10 @@ const TrueFalseQuestion = ({question}) => {
                 }
             </div>
             <ul className="list-group">
-                <li className="list-group-item">
+                <li
+                    className={`list-group-item 
+                    ${grade && question.correct === "true"? "list-group-item-success" : ""}
+                    ${grade && question.correct !== "true" && answer !== question.correct? "list-group-item-danger" : ""}`}>
                     <label>
                         <input
                             onClick={() => setAnswer("true")}
@@ -30,7 +33,10 @@ const TrueFalseQuestion = ({question}) => {
                         True
                     </label>
                 </li>
-                <li className="list-group-item">
+                <li
+                    className={`list-group-item 
+                    ${grade && question.correct === "false"? "list-group-item-success" : ""}
+                    ${grade && question.correct !== "false" && answer !== question.correct? "list-group-item-danger" : ""}`}>
                     <label>
                         <input
                             onClick={() => setAnswer("false")}

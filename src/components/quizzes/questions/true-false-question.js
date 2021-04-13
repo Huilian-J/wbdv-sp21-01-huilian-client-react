@@ -32,6 +32,16 @@ const TrueFalseQuestion = ({question}) => {
                             type="radio" name={question._id} className="mr-1"/>
                         True
                     </label>
+                    {
+                        grade && question.correct === "true" &&
+                        <i className="fas fa-check float-right mt-2"></i>
+                    }
+                    {
+                        grade &&
+                        question.correct !== "true" &&
+                        answer !== question.correct &&
+                        <i className="fas fa-times float-right mt-2"></i>
+                    }
                 </li>
                 <li
                     className={`list-group-item 
@@ -43,6 +53,16 @@ const TrueFalseQuestion = ({question}) => {
                             type="radio" name={question._id} className="mr-1"/>
                         False
                     </label>
+                    {
+                        grade && question.correct === "false" &&
+                        <i className="fas fa-check float-right mt-2"></i>
+                    }
+                    {
+                        grade &&
+                        question.correct !== "false" &&
+                        answer !== question.correct &&
+                        <i className="fas fa-times float-right mt-2"></i>
+                    }
                 </li>
             </ul>
             <h6 className="mt-2">Your answer: {answer}</h6>

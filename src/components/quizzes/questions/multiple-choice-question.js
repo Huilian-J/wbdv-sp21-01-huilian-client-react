@@ -39,6 +39,17 @@ const MultipleChoiceQuestion = ({question}) => {
                                         type="radio" name={question._id} className="mr-1"/>
                                     {choice}
                                 </label>
+                                {
+                                    grade && question.correct === choice &&
+                                    <i className="fas fa-check float-right mt-2"></i>
+                                }
+                                {
+                                    grade &&
+                                    question.correct !== choice &&
+                                    answer !== question.correct &&
+                                    answer === choice &&
+                                    <i className="fas fa-times float-right mt-2"></i>
+                                }
                             </li>
                         )
 

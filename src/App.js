@@ -5,6 +5,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Home from "./components/home"
 import CourseEditor from "./components/course-editor/course-editor";
 import React from "react";
+import QuizzesList from "./components/quizzes/quizzes-list";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
                   "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId/topics/:topicId/widgets/:widgetId"]}
                      exact={true}
                      render={(props) => <CourseEditor {...props}/>}/>
+              <Route path={"/courses/:courseId/quizzes"} exact={true}>
+                  <QuizzesList/>
+              </Route>
           </div>
       </BrowserRouter>
   );

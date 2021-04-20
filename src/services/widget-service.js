@@ -1,5 +1,7 @@
 const TOPICS_URL = `https://wbdv-sp21-huilianj-server-java.herokuapp.com/api/topics`
 const WIDGETS_URL = `https://wbdv-sp21-huilianj-server-java.herokuapp.com/api/widgets`
+// const TOPICS_URL = `http://localhost:8080/api/topics`
+// const WIDGETS_URL = `http://localhost:8080/api/widgets`
 
 export const createWidget = (tid, widget) =>
     fetch(`${TOPICS_URL}/${tid}/widgets`, {

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60ff518f-8aa1-4aa2-b18b-36b8567f3200" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/question-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/question-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/quiz-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/quiz-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/quizzes/questions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,19 +54,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -89,7 +77,8 @@
       <workItem from="1614875176233" duration="61646000" />
       <workItem from="1616171497047" duration="364000" />
       <workItem from="1616380507758" duration="40107000" />
-      <workItem from="1618276490998" duration="10263000" />
+      <workItem from="1618276490998" duration="11570000" />
+      <workItem from="1618887283838" duration="1748000" />
     </task>
     <servers />
   </component>
@@ -109,28 +98,28 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1615751757092" />
-    <state width="1398" height="99" key="GridCell.Tab.0.bottom" timestamp="1617656830097">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom" timestamp="1618889971901">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1613964024748" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618889971901" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.25.1440.804@0.25.1440.804" timestamp="1614016816243" />
     <state width="1398" height="99" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1617656830097" />
-    <state width="1398" height="99" key="GridCell.Tab.0.center" timestamp="1617656830096">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center" timestamp="1618889971899">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1613964024747" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618889971899" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.25.1440.804@0.25.1440.804" timestamp="1614016816242" />
     <state width="1398" height="99" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1617656830096" />
-    <state width="1398" height="99" key="GridCell.Tab.0.left" timestamp="1617656830096">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left" timestamp="1618889971898">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1613964024745" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618889971898" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.25.1440.804@0.25.1440.804" timestamp="1614016816241" />
     <state width="1398" height="99" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1617656830096" />
-    <state width="1398" height="99" key="GridCell.Tab.0.right" timestamp="1617656830097">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right" timestamp="1618889971900">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1613964024748" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618889971900" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.25.1440.804@0.25.1440.804" timestamp="1614016816242" />
     <state width="1398" height="99" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1617656830097" />
     <state x="314" y="156" key="RollbackChangesDialog" timestamp="1614016141888">
